@@ -8,7 +8,7 @@ app.get('/', function(req,res) {
 });
 
 app.get('/user', function(req,res) {
-    res.send('Uesr list');  
+    res.send('User list');  
   });
 
 app.listen(port, function() {
