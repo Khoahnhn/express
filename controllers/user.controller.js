@@ -31,20 +31,8 @@ async function get(req,res) {
 
 async function postCreate(req,res) {
     req.body.id = shortid.generate();
-    let errors = [];
-    if(!req.body.name) {
-      errors.push('Name is requied.');
-    }
-    if(!req.body.phone) {
-      errors.push('Phone is requied.');
-    }
-    if(errors.length) {
-      res.render('users/create',{
-        errors: errors,
-        values: req.body
-      });
-      return;
-    }
+
+    console.log(res.locals);
 
     db.get('users').push(req.body).write();
     res.redirect('/users');
