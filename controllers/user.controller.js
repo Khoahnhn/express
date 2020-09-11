@@ -18,6 +18,7 @@ async function search(req,res) {
 };
 
 async function create(req,res) {
+  console.log(req.cookies);
     res.render('users/create');
 };
 
@@ -31,7 +32,7 @@ async function get(req,res) {
 
 async function postCreate(req,res) {
     req.body.id = shortid.generate();
-
+3
     console.log(res.locals);
 
     db.get('users').push(req.body).write();
