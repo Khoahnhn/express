@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
@@ -11,7 +13,7 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true }));
-app.use(cookieParser("gsfdg"));
+app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(express.static('public'));
 
 app.set('view engine','pug');
