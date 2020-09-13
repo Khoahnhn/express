@@ -3,7 +3,9 @@
     {
       "name": "Khoa",
       "phone": "524525",
-      "id": "NBTaFiopt"
+      "id": "NBTaFiopt",
+      "email": "khoahn@gmail.com",
+      "password": "123456"
     }
   ]
 }
